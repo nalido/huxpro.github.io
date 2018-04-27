@@ -1,0 +1,14 @@
+---
+layout:     post
+title:      "[python]使用多个分隔符分割字符串"
+subtitle:   " \"Hello World, Hello Blog\""
+date:       2018-04-27 18:04:00
+author:     "Nalido"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+tags:
+    - 编程笔记
+    - python
+---
+
+Python中字符串分割成数组，一般用split。但是split只支持单个分隔符的分割，如果想要同时使用多个分隔符，可以使用re模块。
