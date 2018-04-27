@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "[python]使用多个分隔符分割字符串"
-subtitle:   " \"Hello World, Hello Blog\""
+subtitle:   ""
 date:       2018-04-27 18:04:00
 author:     "Nalido"
 header-img: "img/post-bg-2015.jpg"
