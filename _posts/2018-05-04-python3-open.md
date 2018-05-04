@@ -23,7 +23,7 @@ with open(jsFile, "a+") as f:
         dct = {}
 ~~~~~~~
 
-但是在python3中,上述代码就会报错.
+但是在python3中,上述代码就会报错. 修改方法是改为`r`.
 ~~~~~~~
 Expecting value: line 1 column 1 (char 0)
 ~~~~~~~
