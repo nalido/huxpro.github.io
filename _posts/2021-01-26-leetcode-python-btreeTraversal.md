@@ -14,6 +14,7 @@ tags:
 https://leetcode.com/problems/binary-tree-inorder-traversal/
 
 迭代框架
+
 ```java
 while(node != null || !stack.isEmpty()) {
     while (node != null) {
@@ -28,9 +29,22 @@ while(node != null || !stack.isEmpty()) {
 }
 ```
 
-
+Python实现
 
 ```python
+  
+def preorderTraversal(self, root):
+    stack = []
+    node = root
+    while stack or node:
+        while node:
+            res.append(node.val)
+            stack.append(node)
+            node = node.left
+        node = stack.pop()
+        node = node.right
+    return res
+    
 def inorderTraversal(self, root):
     """
     :type root: TreeNode
@@ -45,18 +59,27 @@ def inorderTraversal(self, root):
         ans.append(root.val)
         root = root.right
     return ans
-    
-def preorderTraversal(self, root):
-    stack = []
-    node = root
-    while stack or node:
-        while node:
-            res.append(node.val)
-            stack.append(node)
-            node = node.left
-        node = stack.pop()
-        node = node.right
-    return res
+
+def postorderTraversal(self, root):
+    """
+    :type root: TreeNode
+    :rtype: List[int]
+    """
+    stack, ans = [], []
+    prev = None
+    while root or stack:
+        while root:
+            stack.append(root)
+            root = root.left
+        root = stack.pop()
+        if not root.right or root.right == prev:
+            ans.append(root.val)
+            prev = root
+            root = None
+        else:
+            stack.append(root)
+            root = root.right
+    return ans
 ```
 
 
