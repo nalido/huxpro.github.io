@@ -1,4 +1,4 @@
- ---
+---
 layout:     post
 title:      "[leetcode] 二叉树的非递归遍历"
 subtitle:   ""
@@ -27,4 +27,16 @@ def inorderTraversal(self, root):
         ans.append(root.val)
         root = root.right
     return ans
+    
+def preorderTraversal(self, root):
+    stack = []
+    node = root
+    while stack or node:
+        while node:
+            res.append(node.val)
+            stack.append(node)
+            node = node.left
+        node = stack.pop()
+        node = node.right
+    return res
 ```
