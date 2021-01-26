@@ -12,6 +12,24 @@ tags:
 ---
 
 https://leetcode.com/problems/binary-tree-inorder-traversal/
+
+迭代框架
+```java
+while(node != null || !stack.isEmpty()) {
+    while (node != null) {
+        stack.push(node);
+        // 先序遍历
+        node = node.left;
+    }
+    node = stack.pop();
+    // 中序遍历
+    node = node.right;
+    // 后序遍历
+}
+```
+
+
+
 ```python
 def inorderTraversal(self, root):
     """
@@ -40,3 +58,5 @@ def preorderTraversal(self, root):
         node = node.right
     return res
 ```
+
+
